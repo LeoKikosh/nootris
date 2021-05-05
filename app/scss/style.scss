@@ -1,0 +1,240 @@
+@import 'vars';
+@import 'fonts';
+@import 'reset';
+@import 'global';
+
+// Styles for Header
+
+.header {
+  padding: 24px 0;
+  background-color: $black;
+
+  &__inner {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+}
+
+.logo {
+  order: 1;
+}
+
+.menu {
+  display: block;
+  order: 2;
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__list-item:not(:last-child) {
+    margin-right: 40px;
+  }
+
+  &__list-link {
+    color: $white;
+    transition: color .5s ease;
+  }
+
+  &__list-link:hover {
+    color: $orange;
+  }
+}
+
+.user-nav {
+  display: block;
+  position: relative;
+  order: 3;
+
+  &__num {
+    display: inline-block;
+    position: absolute;
+    top: 22px;
+    left: 20px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: $orange;
+    color: $black;
+    font-size: 12px;
+    line-height: 1.5em;
+    text-align: center;
+  }
+}
+
+.hamburger {
+  background-image: url(../images/burger-menu.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  width: 40px;
+  height: 25px;
+  display: none;
+}
+
+// Styles for Product section
+
+.product {
+  background-color: $yellow;
+
+  &__inner {
+    padding: 176px 0 96px;
+    position: relative;
+  }
+
+  &__title {
+    @extend %rubik-700;
+    font-size: 144px;
+    line-height: 152px;
+    margin-bottom: 24px;
+    position: relative;
+    z-index: 2;
+    text-transform: uppercase;
+  }
+
+  &__text:first-of-type {
+    max-width: 672px;
+    color: $black;
+    font-size: 24px;
+    line-height: 28px;
+    margin-bottom: 120px;
+  }
+
+  &__subtitle {
+    @extend %rubik-700;
+    font-size: 36px;
+    line-height: 43px;
+    color: $black;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+  }
+
+  &__text:last-of-type {
+    max-width: 416px;
+    color: $black;
+    line-height: 21px;
+    margin-bottom: 120px;
+  }
+
+  &__img {
+    position: absolute;
+    top: 137px;
+    right: -35px;
+  }
+}
+
+// Styles for Order section
+
+.order {
+  background-color: #111111;
+  margin-top: -130px;
+
+  &__inner {
+    padding: 110px 15px 112px;
+    max-width: 1093px;
+    margin: 0 auto;
+  }
+
+  &__title {
+    @extend %rubik-700;
+    font-size: 48px;
+    line-height: 57px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 85px;
+  }
+
+  &__title--orange {
+    display: block;
+    color: $orange;
+  }
+
+  &__price {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 60px;
+  }
+
+  &__price-old {
+    display: block;
+    font-size: 36px;
+    line-height: 42px;
+    margin-right: 32px;
+    color: #ADADAD;
+    align-self: center;
+    position: relative;
+  }
+
+  &__price-old::before {
+    position: absolute;
+    content: '';
+    width: 112px;
+    height: 2px;
+    background-color: #ADADAD;
+    top: 20px;
+    left: -13px;
+  }
+
+  &__price-new {
+    display: block;
+    font-size: 48px;
+    line-height: 57px;
+  }
+
+  &__benefits {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin-bottom: 64px;
+  }
+
+  &__benefits-item {
+    height: 290px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__benefits-text {
+    line-height: 21px;
+  }
+
+  &__benefits-text--orange {
+    display: block;
+    color: $orange;
+  }
+
+  &__benefits-item--delivery {
+    font-size: 36px;
+    line-height: 42px;
+  }
+
+  &__benefits-item--delivery .order__benefits-text--orange {
+    font-size: 24px;
+    line-height: 28px;
+    margin-top: 12px;
+  }
+
+  &__btn {
+    background-color: $orange;
+    border-radius: 7px;
+    padding: 16px 32px;
+    margin: 0 auto;
+    display: block;
+    border: none;
+    cursor: pointer;
+    transition: background-color .5s ease;
+  }
+
+  &__btn:hover {
+    background-color: $yellow;
+  }
+}
+
+@import 'media';

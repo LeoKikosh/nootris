@@ -1,0 +1,110 @@
+@media (max-width: 1200px) {
+
+  .menu {
+    display: none;
+    text-align: center;
+    width: 100%;
+    order: 3;
+
+    &__list {
+      flex-direction: column;
+    }
+
+    &__list-item {
+      margin-bottom: 30px;
+    }
+
+    &__list-item:not(:last-child) {
+      margin-right: 0;
+    }
+  }
+
+  .user-nav {
+    display: flex;
+    align-items: center;
+    order: 2;
+
+    &__link {
+      margin-right: 30px;
+    }
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .active {
+    display: block;
+  }
+
+  .product {
+    &__img {
+      display: none;
+    }
+
+    &__title {
+      font-size: 78px;
+      line-height: 90px;
+    }
+  }
+
+  .order {
+    &__benefits-text {
+      line-height: 30px;
+    }
+  }
+}
+
+@media (max-width: 560px) {
+
+  .product {
+    &__inner {
+      padding: 90px 0 96px;
+    }
+
+    &__title {
+      font-size: 45px;
+      line-height: 52px;
+    }
+
+    &__subtitle {
+      font-size: 28px;
+      line-height: 32px;
+    }
+  }
+
+  .order {
+    &__title {
+      font-size: 35px;
+      line-height: 46px;
+    }
+
+    &__price-new {
+      font-size: 39px;
+      line-height: 45px;
+    }
+
+    &__price-old {
+      font-size: 26px;
+      line-height: 41px;
+    }
+
+    .order__price-old::before {
+      width: 87px;
+    }
+
+    &__benefits {
+      flex-direction: column;
+    }
+
+    &__benefits-item {
+      margin-bottom: 20px;
+    }
+
+    &__benefits-img {
+      margin: 0 auto;
+      max-width: 60%;
+      height: auto;
+    }
+  }
+}
